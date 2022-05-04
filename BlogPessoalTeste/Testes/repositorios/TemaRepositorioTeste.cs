@@ -36,7 +36,13 @@ namespace BlogPessoalTeste.Testes.repositorios
             //THEN - Entao deve retornar 4 temas
             Assert.AreEqual(4, _repositorio.PegarTodosTemas().Count);
         }
-        
+
+        [TestMethod]
+        public void SomaTest()
+        {
+            Assert.AreEqual(true, true);
+        }
+
         [TestMethod]
         [DataRow(1)]
         public void PegarTemaPeloIdRetornaTema1(int id)
