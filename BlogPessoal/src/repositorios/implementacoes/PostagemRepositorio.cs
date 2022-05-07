@@ -30,7 +30,10 @@ namespace BlogPessoal.src.repositorios.implementacoes
 
         public List<PostagemModelo> PegarTodasPostagens() 
         {
-            return _contexto.Postagens.ToList();
+            return _contexto.Postagens
+                .Include(p => p.Criador)
+                .Include(p => p.Tema)
+                .ToList();
         }
 
         public PostagemModelo PegarPostagemPeloId(int id) 
