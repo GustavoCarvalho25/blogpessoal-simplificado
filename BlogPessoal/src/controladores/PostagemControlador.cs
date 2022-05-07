@@ -48,7 +48,7 @@ namespace BlogPessoal.src.controladores
             return Ok(lista);
         }
 
-        [HttpGet]
+        [HttpGet("pesquisa")]
         public IActionResult PegarPostagensPorPesquisa(
             [FromQuery] string titulo,
             [FromQuery] string descricaoTema,

@@ -48,7 +48,7 @@ namespace BlogPessoal.src.controladores
             return Ok(tema);
         }
 
-        [HttpGet]
+        [HttpGet("pesquisa")]
         public IActionResult PegarTemasPelaDescricao([FromQuery] string descricaoTema)
         {
             var temas = _repositorio.PegarTemasPelaDescricao(descricaoTema);
