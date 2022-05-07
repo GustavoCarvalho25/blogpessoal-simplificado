@@ -37,7 +37,7 @@ namespace BlogPessoal.src.repositorios.implementacoes
             return _contexto.Temas.FirstOrDefault(t => t.Id == id);
         }
 
-        public List<TemaModelo> PegarTemaPelaDescricao(string descricao)
+        public List<TemaModelo> PegarTemasPelaDescricao(string descricao)
         {
             return _contexto.Temas
                             .Where(u => u.Descricao.Contains(descricao))
