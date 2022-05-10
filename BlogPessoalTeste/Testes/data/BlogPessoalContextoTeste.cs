@@ -3,6 +3,7 @@ using BlogPessoal.src.data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using BlogPessoal.src.modelos;
 using System.Linq;
+using BlogPessoal.src.utilidades;
 
 namespace BlogPessoalTeste.Testes.data
 {
@@ -30,6 +31,7 @@ namespace BlogPessoalTeste.Testes.data
             usuario.Email = "karol@email.com";
             usuario.Senha = "134652";
             usuario.Foto = "AKITAOLINKDAFOTO";
+            usuario.Tipo = TipoUsuario.NORMAL;
 
             _contexto.Usuarios.Add(usuario); // Adcionando usuario
 
