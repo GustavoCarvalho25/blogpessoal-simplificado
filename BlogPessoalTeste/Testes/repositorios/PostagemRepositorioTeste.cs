@@ -74,8 +74,10 @@ namespace BlogPessoalTeste.Testes.repositorios
             );
             
             // WHEN - Quando eu busco todas as postagens
+            var postagens = await _repositorioP.PegarTodasPostagensAsync();
+
             // THEN - Eu tenho 3 postagens
-            Assert.AreEqual(3, _repositorioP.PegarTodasPostagens().Count());
+            Assert.AreEqual(3, postagens.Count);
         }
 
         [TestMethod]
@@ -188,7 +190,7 @@ namespace BlogPessoalTeste.Testes.repositorios
 
             var postagensTeste1 = await _repositorioP.PegarPostagensPorPesquisaAsync("massa", null, null);
             var postagensTeste2 = await _repositorioP.PegarPostagensPorPesquisaAsync(null, "C#", null);
-            var postagensTeste3 = await _repositorioP.PegarPostagensPorPesquisaAsync(null, null, "Gustavo Boaz");
+            var postagensTeste3 = await _repositorioP.PegarPostagensPorPesquisaAsync(null, null, "gustavo@email.com");
 
             // WHEN - Quando eu busco as postagen
             // THEN - Eu tenho as postagens que correspondem aos criterios
