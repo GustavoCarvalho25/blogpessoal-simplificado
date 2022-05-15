@@ -105,7 +105,7 @@ namespace BlogPessoal.src.controladores
         ///        "titulo": "Dotnet Core mudando o mundo", 
         ///        "descricao": "Uma ferramenta muito boa para desenvolver aplicações web",
         ///        "foto": "URLDAIMAGEM",
-        ///        "emailCriador": "gustavo@email.com",
+        ///        "emailCriador": "gustavo@domain.com",
         ///        "descricaoTema": "CSHARP"
         ///     }
         ///
